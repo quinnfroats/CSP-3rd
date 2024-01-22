@@ -20,7 +20,68 @@
 
     <style>
         h6 {
-            font-size: xx-large;
+            font-size: xx-large; /* im a psychopath */
+        }
+        #banner{
+            border: 5px outset red;
+            background-color: lightblue;
+            text-align: center;
+            min-height: 50px;
+        }
+        div#face {
+            width: 40vw;
+            height: 40vw;
+            max-width: 400px;
+            max-height: 400px;
+            margin: 0 auto;
+            position: relative;
+            background: yellow;
+            margin-top: 2rem;
+        }
+
+        div#face, div#face * {
+            border-radius: 50%;
+        }
+
+        .eye {
+            width: 25%;
+            height: 25%;
+            background: #fff;
+            position: absolute;
+            top: 20%;
+        }
+
+        .left.eye {
+            left: 20%;
+        }
+
+        .right.eye {
+            right: 20%;
+        }
+
+        .pupil {
+            background: #000;
+            width: 50%;
+            height: 50%;
+            position: relative;
+            left: 25%;
+            transform-origin: bottom;
+        }
+
+        #mouth {
+            position: relative;
+            width: 60%;
+            left: 20%;
+            height: 25%;
+            border: 1vw solid transparent;
+            border-radius: 50%;
+            top: 50%;
+            border-bottom-color: #000;
+        }
+        section {
+            font-size: 100000%;
+            background: repeat;
+            background-image: url(https://snivyllama.github.io/favicon.ico);
         }
     </style>
 </head>
@@ -59,18 +120,171 @@
             <small>Me</small>
             <!-- Put your 8 examples of other elements ↑↑↑↑↑↑Above↑↑↑↑↑↑ here-->
         </div>
+        <div id="specific">
+            <h1>idk</h1>
+            <section>
+                <h2>p1</h2>
+                <p>som</p>
+            </section>
+            <section>
+                <h2>aa</h2>
+                <p>this is p2</p>
+            </section>
+        </div>
         <div id="banner">
+            <marquee
+  direction="down"
+  width="100%"
+  height="200"
+  behavior="alternate" scrolldelay="5" truespeed>
+  <marquee behavior="alternate" scrolldelay="5" truespeed>aa<br>aa</marquee>
+</marquee>
         </div>
         <div id="face">
-
+            <div class="left eye">
+                <div class="pupil">
+                </div>
+           </div>
+           <div class="right eye">
+                <div class="pupil">
+                </div>
+           </div>
+           <div id="mouth">
+           </div>
         </div>
     </main>
 
-
+    <code>
+#&nbspCHESS&nbspIN&nbspAWK? <br>
+#&nbspPAWN&nbsp=&nbsp1 <br>
+#&nbspBISHOP&nbsp=&nbsp2 <br>
+#&nbspKNIGHT&nbsp=&nbsp3 <br>
+#&nbspROOK&nbsp=&nbsp4 <br>
+#&nbspQUEEN&nbsp=&nbsp5 <br>
+#&nbspKING&nbsp=&nbsp6 <br>
+BEGIN&nbsp{ <br>
+&nbsp&nbsp&nbsp&nbspfor&nbsp(col&nbsp=&nbsp1;&nbspcol&nbsp<=&nbsp8;&nbspcol++)&nbsp{ <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspboard[col,&nbsp2]&nbsp=&nbsp1; <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspboard[col,&nbsp7]&nbsp=&nbsp-1; <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif&nbsp(col&nbsp==&nbsp1&nbsp||&nbspcol&nbsp==&nbsp8)&nbspboard[col,&nbsp1]&nbsp=&nbsp4; <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspelse&nbspif&nbsp(col&nbsp==&nbsp2&nbsp||&nbspcol&nbsp==&nbsp7)&nbspboard[col,&nbsp1]&nbsp=&nbsp3; <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspelse&nbspif&nbsp(col&nbsp==&nbsp3&nbsp||&nbspcol&nbsp==&nbsp6)&nbspboard[col,&nbsp1]&nbsp=&nbsp2; <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspelse&nbspif&nbsp(col&nbsp==&nbsp4)&nbspboard[col,&nbsp1]&nbsp=&nbsp5; <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspelse&nbspboard[col,&nbsp1]&nbsp=&nbsp6; <br>
+&nbsp&nbsp&nbsp&nbsp} <br>
+&nbsp&nbsp&nbsp&nbsp#&nbspcopy&nbspall&nbsppieces <br>
+&nbsp&nbsp&nbsp&nbspfor&nbsp(col&nbsp=&nbsp1;&nbspcol&nbsp<=&nbsp8;&nbspcol++)&nbsp{ <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspboard[col,&nbsp8]&nbsp=&nbsp-board[col,&nbsp1]; <br>
+&nbsp&nbsp&nbsp&nbsp} <br>
+&nbsp&nbsp&nbsp&nbspturn&nbsp=&nbsp1; <br>
+&nbsp&nbsp&nbsp&nbsprender(); <br>
+} <br>
+NF&nbsp==&nbsp1&nbsp&&&nbspvalidate($0)&nbsp{ <br>
+&nbsp&nbsp&nbsp&nbspboard[coords[3],&nbspcoords[4]]&nbsp=&nbspboard[coords[1],&nbspcoords[2]]; <br>
+&nbsp&nbsp&nbsp&nbspboard[coords[1],&nbspcoords[2]]&nbsp=&nbsp""; <br>
+&nbsp&nbsp&nbsp&nbspturn&nbsp=&nbsp-turn; <br>
+&nbsp&nbsp&nbsp&nbsprender(); <br>
+&nbsp&nbsp&nbsp&nbspnext; <br>
+} <br>
+{&nbsprender();&nbsp} <br>
+END&nbsp{&nbsp} <br>
+function&nbsprender(&nbsp&nbspcol,&nbsprow)&nbsp{ <br>
+&nbsp&nbsp&nbsp&nbspprintf&nbsp"\x1b[2J\x1b[100A"; <br>
+&nbsp&nbsp&nbsp&nbspfor&nbsp(row&nbsp=&nbsp8;&nbsprow&nbsp>&nbsp0;&nbsprow--)&nbsp{ <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspfor&nbsp(col&nbsp=&nbsp1;&nbspcol&nbsp<=&nbsp8;&nbspcol++)&nbsp{ <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif&nbsp(board[col,&nbsprow])&nbsp{ <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif&nbsp(board[col,&nbsprow]~/-1/)&nbspprintf&nbsp"♟"; <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspelse&nbspif&nbsp(board[col,&nbsprow]~/-2/)&nbspprintf&nbsp"♝"; <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspelse&nbspif&nbsp(board[col,&nbsprow]~/-3/)&nbspprintf&nbsp"♞"; <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspelse&nbspif&nbsp(board[col,&nbsprow]~/-4/)&nbspprintf&nbsp"♜"; <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspelse&nbspif&nbsp(board[col,&nbsprow]~/-5/)&nbspprintf&nbsp"♛"; <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspelse&nbspif&nbsp(board[col,&nbsprow]~/-6/)&nbspprintf&nbsp"♚"; <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspelse&nbspif&nbsp(board[col,&nbsprow]~/^1/)&nbspprintf&nbsp"♙"; <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspelse&nbspif&nbsp(board[col,&nbsprow]~/^2/)&nbspprintf&nbsp"♗"; <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspelse&nbspif&nbsp(board[col,&nbsprow]~/^3/)&nbspprintf&nbsp"♘"; <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspelse&nbspif&nbsp(board[col,&nbsprow]~/^4/)&nbspprintf&nbsp"♖"; <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspelse&nbspif&nbsp(board[col,&nbsprow]~/^5/)&nbspprintf&nbsp"♕"; <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspelse&nbspif&nbsp(board[col,&nbsprow]~/^6/)&nbspprintf&nbsp"♔"; <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}&nbspelse&nbspprintf&nbsp"&nbsp"; <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp} <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspprint&nbsp""; <br>
+&nbsp&nbsp&nbsp&nbsp} <br>
+&nbsp&nbsp&nbsp&nbspprintf&nbsp"\nenter&nbspyour&nbspnext&nbspmove:&nbsp"; <br>
+} <br>
+function&nbspcol2num(col)&nbsp{&nbsp#&nbspmore&nbspefficient&nbspthan&nbspan&nbspassociative&nbsparray <br>
+&nbsp&nbsp&nbsp&nbspif&nbsp(col&nbsp==&nbsp"A")&nbspreturn&nbsp1; <br>
+&nbsp&nbsp&nbsp&nbspelse&nbspif&nbsp(col&nbsp==&nbsp"B")&nbspreturn&nbsp2; <br>
+&nbsp&nbsp&nbsp&nbspelse&nbspif&nbsp(col&nbsp==&nbsp"C")&nbspreturn&nbsp3; <br>
+&nbsp&nbsp&nbsp&nbspelse&nbspif&nbsp(col&nbsp==&nbsp"D")&nbspreturn&nbsp4; <br>
+&nbsp&nbsp&nbsp&nbspelse&nbspif&nbsp(col&nbsp==&nbsp"E")&nbspreturn&nbsp5; <br>
+&nbsp&nbsp&nbsp&nbspelse&nbspif&nbsp(col&nbsp==&nbsp"F")&nbspreturn&nbsp6; <br>
+&nbsp&nbsp&nbsp&nbspelse&nbspif&nbsp(col&nbsp==&nbsp"G")&nbspreturn&nbsp7; <br>
+&nbsp&nbsp&nbsp&nbspelse&nbspif&nbsp(col&nbsp==&nbsp"H")&nbspreturn&nbsp8; <br>
+} <br>
+function&nbspabs(n)&nbsp{ <br>
+&nbsp&nbsp&nbsp&nbspreturn&nbspn&nbsp>&nbsp0&nbsp?&nbspn&nbsp:&nbsp-n; <br>
+} <br>
+function&nbspsign(n)&nbsp{ <br>
+&nbsp&nbsp&nbsp&nbspreturn&nbspn&nbsp==&nbsp0&nbsp?&nbsp0&nbsp:&nbsp((n&nbsp>&nbsp0)&nbsp*&nbsp2&nbsp-&nbsp1); <br>
+} <br>
+function&nbspisattacking(pcol,&nbspprow,&nbsptcol,&nbsptrow)&nbsp{&nbsp#&nbsppiece,&nbsptarget <br>
+&nbsp&nbsp&nbsp&nbsp#&nbspTODO:&nbspCLEAN&nbspUP&nbspGOOD&nbspLORD <br>
+&nbsp&nbsp&nbsp&nbspif&nbsp(abs(board[pcol,&nbspprow])&nbsp==&nbsp1)&nbsp{ <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif&nbsp(sign(board[pcol,&nbspprow])&nbsp!=&nbspsign(trow&nbsp-&nbspprow))&nbspreturn&nbsp0; <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp#&nbspsingle&nbspmove,&nbspdouble&nbspmove,&nbspcapture <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn&nbsp(abs(trow&nbsp-&nbspprow)&nbsp==&nbsp1&nbsp&&&nbsp!abs(tcol&nbsp-&nbsppcol)&nbsp&&&nbsp!board[tcol,&nbsptrow])&nbsp|| <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp((prow&nbsp==&nbsp2&nbsp||&nbspprow&nbsp==&nbsp7)&nbsp&&&nbspabs(trow&nbsp-&nbspprow)&nbsp==&nbsp2&nbsp&&&nbsp!abs(tcol&nbsp-&nbsppcol)&nbsp&&&nbsp!board[tcol,&nbsptrow]&nbsp&&&nbsp!board[tcol,&nbsptrow-sign(board[pcol,&nbspprow])])&nbsp|| <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp(abs(trow&nbsp-&nbspprow)&nbsp==&nbsp1&nbsp&&&nbspabs(tcol&nbsp-&nbsppcol)&nbsp==&nbsp1&nbsp&&&nbspboard[tcol,&nbsptrow]); <br>
+&nbsp&nbsp&nbsp&nbsp}&nbspelse&nbspif&nbsp(abs(board[pcol,&nbspprow])&nbsp==&nbsp2)&nbsp{ <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif&nbsp(abs(pcol-tcol)&nbsp!=&nbspabs(prow-trow))&nbspreturn&nbsp0; <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspwhile&nbsp(1)&nbsp{ <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppcol&nbsp+=&nbspsign(tcol&nbsp-&nbsppcol); <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspprow&nbsp+=&nbspsign(trow&nbsp-&nbspprow); <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif&nbsp(pcol&nbsp==&nbsptcol)&nbspreturn&nbsp1; <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspelse&nbspif&nbsp(board[pcol,&nbspprow])&nbspreturn&nbsp0; <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp} <br>
+&nbsp&nbsp&nbsp&nbsp}&nbspelse&nbspif&nbsp(abs(board[pcol,&nbspprow])&nbsp==&nbsp3)&nbsp{ <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn&nbsp(abs(tcol&nbsp-&nbsppcol)&nbsp==&nbsp2&nbsp&&&nbspabs(trow&nbsp-&nbspprow)&nbsp==&nbsp1)&nbsp||&nbsp(abs(tcol&nbsp-&nbsppcol)&nbsp==&nbsp1&nbsp&&&nbspabs(trow&nbsp-&nbspprow)&nbsp==&nbsp2); <br>
+&nbsp&nbsp&nbsp&nbsp}&nbspelse&nbspif&nbsp(abs(board[pcol,&nbspprow])&nbsp==&nbsp4)&nbsp{ <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif&nbsp(pcol&nbsp!=&nbsptcol&nbsp&&&nbspprow&nbsp!=&nbsptrow)&nbspreturn&nbsp0; <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspwhile&nbsp(1)&nbsp{ <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif&nbsp(prow&nbsp==&nbsptrow)&nbsppcol&nbsp+=&nbspsign(tcol&nbsp-&nbsppcol); <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspelse&nbspprow&nbsp+=&nbspsign(trow&nbsp-&nbspprow); <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif&nbsp(pcol&nbsp==&nbsptcol&nbsp&&&nbspprow&nbsp==&nbsptrow)&nbspreturn&nbsp1; <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspelse&nbspif&nbsp(board[pcol,&nbspprow])&nbspreturn&nbsp0; <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp} <br>
+&nbsp&nbsp&nbsp&nbsp}&nbspelse&nbspif&nbsp(abs(board[pcol,&nbspprow])&nbsp==&nbsp5)&nbsp{ <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif&nbsp(abs(pcol-tcol)&nbsp==&nbspabs(prow-trow))&nbspwhile&nbsp(1)&nbsp{&nbsp#&nbspBISHOP&nbspMOVEMENT <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppcol&nbsp+=&nbspsign(tcol&nbsp-&nbsppcol); <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspprow&nbsp+=&nbspsign(trow&nbsp-&nbspprow); <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif&nbsp(pcol&nbsp==&nbsptcol)&nbspreturn&nbsp1; <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspelse&nbspif&nbsp(board[pcol,&nbspprow])&nbspreturn&nbsp0; <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}&nbspelse&nbspif&nbsp(pcol&nbsp==&nbsptcol&nbsp||&nbspprow&nbsp==&nbsptrow)&nbspwhile&nbsp(1)&nbsp{&nbsp#&nbspROOK&nbspMOVEMENT <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif&nbsp(prow&nbsp==&nbsptrow)&nbsppcol&nbsp+=&nbspsign(tcol&nbsp-&nbsppcol); <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspelse&nbspprow&nbsp+=&nbspsign(trow&nbsp-&nbspprow); <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif&nbsp(pcol&nbsp==&nbsptcol&nbsp&&&nbspprow&nbsp==&nbsptrow)&nbspreturn&nbsp1; <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspelse&nbspif&nbsp(board[pcol,&nbspprow])&nbspreturn&nbsp0; <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}&nbspelse&nbspreturn&nbsp0; <br>
+&nbsp&nbsp&nbsp&nbsp}&nbspelse&nbspif&nbsp(abs(board[pcol,&nbspprow])&nbsp==&nbsp6)&nbsp{ <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn&nbspabs(tcol&nbsp-&nbsppcol)&nbsp<=&nbsp1&nbsp&&&nbspabs(trow&nbsp-&nbspprow)&nbsp<=&nbsp1; <br>
+&nbsp&nbsp&nbsp&nbsp} <br>
+&nbsp&nbsp&nbsp&nbspreturn&nbsp0; <br>
+} <br>
+function&nbspvalidate(move)&nbsp{ <br>
+&nbsp&nbsp&nbsp&nbsp#&nbspvalidate&nbsp <br>
+&nbsp&nbsp&nbsp&nbspif&nbsp(!move~/^[a-hA-H][1-8][a-hA-H][1-8]$/)&nbspreturn&nbsp0; <br>
+&nbsp&nbsp&nbsp&nbspsplit(move,&nbspcoords,&nbsp//); <br>
+&nbsp&nbsp&nbsp&nbspcoords[1]&nbsp=&nbspcol2num(toupper(coords[1])); <br>
+&nbsp&nbsp&nbsp&nbspcoords[3]&nbsp=&nbspcol2num(toupper(coords[3])); <br>
+&nbsp&nbsp&nbsp&nbsp#&nbspTODO:&nbspKING&nbspCHECK <br>
+&nbsp&nbsp&nbsp&nbspif&nbsp(coords[1]&nbsp==&nbspcoords[3]&nbsp&&&nbspcoords[2]&nbsp==&nbspcoords[4]&nbsp||&nbsp!board[coords[1],&nbspcoords[2]]&nbsp||&nbspsign(turn)&nbsp!=&nbspsign(board[coords[1],&nbspcoords[2]])&nbsp||&nbsp(board[coords[3],&nbspcoords[4]]&nbsp&&&nbspsign(turn)&nbsp==&nbspsign(board[coords[3],&nbspcoords[4]]))&nbsp||&nbsp!isattacking(coords[1],&nbspcoords[2],&nbspcoords[3],&nbspcoords[4]))&nbspreturn&nbsp0; <br>
+&nbsp&nbsp&nbsp&nbspreturn&nbsp1; <br>
+} <br>
+    </code>
     <footer>
 
         <p>
-            <center> Webpage made by <a href="#" target="_blank">Abishek Rao Corp&trade; (while having to deal with Zac Tran)</a></center>
+            <center> Webpage made by <a href="https://snivyllama.github.io" target="_blank">Abishek Rao Corp&trade; (while having to deal with Zac Tran)</a></center>
         </p>
 
     </footer>
