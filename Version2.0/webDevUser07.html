@@ -19,7 +19,76 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-
+        div#face {
+            width: 40vw;
+            height: 40vw;
+            max-width: 400px;
+            max-height: 400px;
+            margin: 0 auto;
+            position: relative;
+            background: yellow;
+            margin-top: 2rem;
+        }
+        
+        div#face,
+        div#face * {
+            border-radius: 50%;
+        }
+        
+        .eye {
+            width: 25%;
+            height: 25%;
+            background: #fff;
+            position: absolute;
+            top: 20%;
+        }
+        
+        .left.eye {
+            left: 20%;
+        }
+        
+        .right.eye {
+            right: 20%;
+        }
+        
+        .pupil {
+            background: #000;
+            width: 50%;
+            height: 50%;
+            position: sticky;
+            left: 25%;
+            transform-origin: bottom;
+        }
+        
+        #mouth {
+            position: relative;
+            width: 60%;
+            left: 20%;
+            height: 25%;
+            border: 1vw solid transparent;
+            border-radius: 50%;
+            top: 50%;
+            border-bottom-color: #000;
+        }
+        
+        h3 {
+            margin: 0;
+        }
+        
+        h2 {
+            margin-bottom: 0;
+        }
+        
+        #banner {
+            border: 5px outset red;
+            background-color: lightblue;
+            text-align: center;
+        }
+        
+        section {
+            border: 2px dashed;
+            border-color: blueviolet;
+        }
     </style>
 </head>
 
@@ -30,26 +99,58 @@
         <h1>About Me</h1>
         <div id="tags">
             <p>
-                This is my first webpage! I was able to code all the HTML and CSS in order to make it.
-                Watch out world of web design here I come!
+                This is my first webpage! I was able to code all the HTML and CSS in order to make it. Watch out world of web design here I come!
             </p>
 
             <h2>Heading Examples</h2>
 
             <!-- Put your Headings ↓↓↓↓↓↓Below↓↓↓↓↓↓ here-->
-
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
             <!-- Put your Headings ↑↑↑↑↑↑Above↑↑↑↑↑↑ here-->
 
             <h2>Examples of "Other" HTML elements</h2>
 
             <!-- Put your 8 examples of other elements ↓↓↓↓↓↓Below↓↓↓↓↓↓ here-->
+            <progress value="5" max="100"></progress>
+            <p><del>Aneesh</del> <ins>Abhay</ins> is awesome</p>
+            <hr>
+            <sub>I'm Jackson</sub>
+            <sup>I'm the best</sup>
+            <small>Aneesh has fake shoes</small>
+            <abbr title="Jackson's Awesome Superteam"> JAS</abbr>
 
             <!-- Put your 8 examples of other elements ↑↑↑↑↑↑Above↑↑↑↑↑↑ here-->
         </div>
+        <div id="specific"></div>
+        <h1>PUT YOUR BIG TITLE HERE</h1>
+        <section>
+            <h2>Introduction or 1st Point</h2>
+            <p>Content in here that explains your 1st point</p>
+        </section>
+
+        <section>
+            <h2>2nd Point</h2>
+            <p>Content in here that explains your 2nd point</p>
+        </section>
         <div id="banner">
+            <marquee>Thank you gang!</marquee>
         </div>
         <div id="face">
-
+            <div class="left eye">
+                <div class="pupil">
+                </div>
+            </div>
+            <div class="right eye">
+                <div class="pupil">
+                </div>
+            </div>
+            <div id="mouth">
+            </div>
         </div>
     </main>
 
@@ -57,7 +158,7 @@
     <footer>
 
         <p>
-            <center> Webpage made by <a href="#" target="_blank">[your name]</a></center>
+            <center> Webpage made by <a href="# " target="_blank ">[your name]</a></center>
         </p>
 
     </footer>
