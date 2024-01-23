@@ -19,7 +19,84 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-
+        h3 {
+            margin: 0;
+        }
+        
+        h2 {
+            margin-bottom: 0;
+        }
+        
+        #banner {
+            border: 5px outset red;
+            background-color: lightblue;
+            text-align: center;
+        }
+        
+        div#face {
+            width: 40vw;
+            height: 40vw;
+            max-width: 400px;
+            max-height: 400px;
+            margin: 0 auto;
+            position: relative;
+            background: yellow;
+            margin-top: 2rem;
+        }
+        
+        div#face,
+        div#face * {
+            border-radius: 50%;
+        }
+        
+        .eye {
+            width: 25%;
+            height: 25%;
+            background: #fff;
+            position: absolute;
+            top: 20%;
+        }
+        
+        .left.eye {
+            left: 20%;
+        }
+        
+        .right.eye {
+            right: 20%;
+        }
+        
+        .pupil {
+            background: #000;
+            width: 50%;
+            height: 50%;
+            position: relative;
+            left: 35%;
+            transform-origin: bottom;
+        }
+        
+        #mouth {
+            position: relative;
+            width: 50%;
+            left: 24%;
+            height: 25%;
+            border: 1vw solid transparent;
+            border-radius: 50%;
+            top: 50%;
+            border-bottom-color: #000;
+        }
+        
+        section {
+            border: 1px dashed blue;
+        }
+        
+        aside {
+            width: 10%;
+            padding-left: 15px;
+            margin-left: 15px;
+            float: right;
+            font-style: italic;
+            background-color: lightblue;
+        }
     </style>
 </head>
 
@@ -49,13 +126,39 @@
             <!-- Put your 8 examples of other elements ↓↓↓↓↓↓Below↓↓↓↓↓↓ here-->
             Sujay's grade in AP CSP <progress value="95" max="100"> </progress >
             <p>Pythagorean Theorem : a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></p>
-            
             <!-- Put your 8 examples of other elements ↑↑↑↑↑↑Above↑↑↑↑↑↑ here-->
         </div>
+        <div> id ="specific"
+            <h1>PUT YOUR BIG TITLE HERE</h1>
+        <section>
+            <h2>Introduction or 1st Point</h2>
+            <p>Content in here that explains your 1st point</p>
+        </section>
+
+        <section>
+            <h2>2nd Point</h2>
+            <p>Content in here that explains your 2nd point</p>
+            <cite>www.Isai.org</cite>
+        </section>
+
+        <aside>
+            <cite>www.APCSP.org</cite>
+        </aside>
+
         <div id="banner">
+            <marquee>Thank you!!!</marquee>
         </div>
         <div id="face">
-
+            <div class="left eye">
+                <div class="pupil">
+                </div>
+           </div>
+           <div class="right eye">
+                <div class="pupil">
+                </div>
+           </div>
+           <div id="mouth">
+           </div>
         </div>
     </main>
 
@@ -63,7 +166,7 @@
     <footer>
 
         <p>
-            <center> Webpage made by <a href="#" target="_blank">[your name]</a></center>
+            <center> Webpage made by <a href="#" target="_blank">[Sujay]</a></center>
         </p>
 
     </footer>
